@@ -1,0 +1,1 @@
+- starting up SimpleAxisServer on port 8888 (/home/davidr/Descargas/codigo_conmapa/axis-1_4/webapps)

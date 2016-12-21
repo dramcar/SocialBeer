@@ -1,0 +1,33 @@
+<deployment xmlns="http://xml.apache.org/axis/wsdd/"
+                xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+     <service name="SocialBeer" provider="java:RPC">
+
+      <parameter name="scope" value="application"/>
+      <parameter name="className" value="socialwebservice.SocialBeer"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <beanMapping qname="ns:Grupo" xmlns:ns="http://localhost/WS/SocialBeer"
+            languageSpecificType="java:socialwebservice.Grupo"/>
+
+      <beanMapping qname="ns:Usuario" xmlns:ns="http://localhost/WS/SocialBeer"
+            languageSpecificType="java:socialwebservice.Usuario"/>
+      
+      <beanMapping qname="ns:Mensaje" xmlns:ns="http://localhost/WS/SocialBeer"
+            languageSpecificType="java:socialwebservice.Mensaje"/>
+
+      <arrayMapping qname="ns:ArrayOfGrupo" xmlns:ns="http://localhost/WS/SocialBeer"
+                 languageSpecificType="java:socialwebservice.Grupo[]" innerType="ns:Grupo"
+                 encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+
+      <arrayMapping qname="ns:ArrayOfUsuario" xmlns:ns="http://localhost/WS/SocialBeer"
+                 languageSpecificType="java:socialwebservice.Usuario[]" innerType="ns:Usuario"
+                 encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+
+      <arrayMapping qname="ns:ArrayOfMensaje" xmlns:ns="http://localhost/WS/SocialBeer"
+                 languageSpecificType="java:socialwebservice.Mensaje[]" innerType="ns:Mensaje"
+                 encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+
+     </service>
+
+    </deployment>
